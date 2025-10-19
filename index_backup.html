@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inside Bogotá — Investigaciones Privadas</title>
+  <meta name="description" content="Inside Bogotá - Agencia de investigación privada en Bogotá. Verdad, discreción y resultados." />
+  <style>
+    /* ---------- Paleta y tipografía ---------- */
+    :root{
+      --bg:#070707;
+      --panel:#0f0f10;
+      --accent:#bfbfbf; /* plateado */
+      --muted:#8f8f8f;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #050505 0%, #0b0b0b 100%);
+      color: #e9e9e9;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* ---------- layout ---------- */
+    header{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-bottom: 1px solid rgba(191,191,191,0.06);
+      padding:38px 18px;
+      text-align:center;
+      position:relative;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+    .brand{
+      font-size:34px;
+      font-weight:700;
+      color:var(--accent);
+      letter-spacing:1px;
+      text-shadow:0 0 12px rgba(191,191,191,0.06);
+      display:inline-block;
+    }
+    header p{margin:8px 0 0;color:var(--muted)}
+
+    /* ---------- hero ---------- */
+    .hero{
+      display:flex;
+      gap:30px;
+      align-items:center;
+      justify-content:space-between;
+      padding:56px 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    }
+    .hero-left{flex:1;min-width:260px}
+    .hero-h{
+      font-size:28px;color:#f1f1f1;margin:0 0 10px;
+      letter-spacing:0.6px;font-weight:700;
+    }
+    .hero-sub{color:var(--muted);max-width:760px}
+    .hero-cta{margin-top:22px}
+    .btn{
+      display:inline-block;padding:12px 22px;border:1px solid rgba(191,191,191,0.22);
+      color:var(--accent);text-decoration:none;border-radius:2px;
+      transition:all .18s ease;background:transparent;
+    }
+    .btn:hover{background:rgba(191,191,191,0.06);transform:translateY(-2px);}
+
+    /* ---------- cards / services ---------- */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+      padding:18px;border-radius:8px;
+      min-height:120px;
+    }
+    .card h3{margin:0 0 10px;color:var(--accent);font-size:16px}
+    .card p{color:var(--muted);font-size:14px;margin:0}
+
+    /* ---------- casos destacados ---------- */
+    .cases{margin:48px 0}
+    .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .case{
+      display:flex;gap:14px;background:var(--panel);padding:16px;border-radius:8px;
+      border:1px solid rgba(255,255,255,0.03);
+      align-items:flex-start;
+    }
+    .case img{width:180px;height:110px;object-fit:cover;border-radius:6px;flex-shrink:0}
+    .case h4{margin:0;color:var(--accent);font-size:16px}
+    .case p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    /* ---------- valores / contact ---------- */
+    .values{display:flex;gap:18px;margin:40px 0;flex-wrap:wrap}
+    .value{flex:1;min-width:220px;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .value h4{margin:0;color:var(--accent)}
+    .value p{color:var(--muted);margin-top:8px}
+
+    .contact{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      padding:26px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);
+      display:flex;gap:24px;align-items:center;justify-content:space-between;margin-bottom:60px;
+    }
+    .contact .left{}
+    .contact h3{margin:0;color:var(--accent)}
+    .meta{color:var(--muted);margin-top:8px;font-size:14px}
+    .contact .actions{display:flex;gap:12px}
+
+    footer{border-top:1px solid rgba(255,255,255,0.03);padding:26px 18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* ---------- responsive ---------- */
+    @media (max-width:980px){
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .case-grid{grid-template-columns:1fr}
+      .hero{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:600px){
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="wrap">
+      <div class="brand">Inside Bogotá</div>
+      <p>Agencia de investigación privada — Verdad, discreción y resultados</p>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="hero-h">Expertos en Investigaciones Discretas</h1>
+        <p class="hero-sub">
+          Inside Bogotá es una agencia de investigación privada de primer nivel con sede en el corazón de Bogotá, Colombia. Con el compromiso de descubrir la verdad con integridad y precisión, nuestro equipo de investigadores experimentados utiliza tecnología de vanguardia y un amplio conocimiento local para ofrecer soluciones integrales adaptadas a las necesidades de nuestros clientes. Ya sea que se trate de investigaciones corporativas o asuntos personales, Inside Bogotá se compromete a mantener los más altos estándares de confidencialidad y profesionalismo, garantizando a nuestros clientes resultados confiables con absoluta discreción.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="mailto:insidebogota82@gmail.com?subject=Contacto%20desde%20web%20Inside%20Bogot%C3%A1">Contactar ahora</a>
+          <a class="btn" href="#servicios" style="margin-left:10px">Ver servicios</a>
+        </div>
+      </div>
+
+      <!-- imagen de ejemplo -->
+      <div style="min-width:320px;max-width:420px">
+        <img src="https://picsum.photos/600/380?random=12" alt="Bogotá - ejemplo" style="width:100%;border-radius:8px;border:1px solid rgba(255,255,255,0.03);">
+        <div style="margin-top:8px;color:var(--muted);font-size:13px">Profesionalismo y discreción</div>
+      </div>
+    </section>
+
+    <!-- servicios en resumen -->
+    <section id="servicios" style="margin-top:18px">
+      <div class="cards">
+        <div class="card">
+          <h3>Corporate Fraud Investigation</h3>
+          <p>Nuestro equipo resolvió con éxito un complejo caso de fraude corporativo para una importante firma de Bogotá. Mediante un meticuloso análisis financiero y una vigilancia estratégica, reunimos evidencia concluyente que condujo a la recuperación de importantes activos y la captura de los responsables.</p>
+        </div>
+
+        <div class="card">
+          <h3>Verificación de antecedentes</h3>
+          <p>Realizamos verificaciones de antecedentes exhaustivas para corporaciones, garantizando la integridad del proceso de contratación y mitigando riesgos al verificar credenciales y detectar información no divulgada.</p>
+        </div>
+
+        <div class="card">
+          <h3>Búsqueda de personas</h3>
+          <p>En un caso de gran repercusión, localizamos a una persona desaparecida en una semana y la reunimos con su familia mediante técnicas avanzadas y colaboración con autoridades locales.</p>
+        </div>
+
+        <div class="card">
+          <h3>Protección de propiedad intelectual</h3>
+          <p>Ante un posible robo de propiedad intelectual, combinamos análisis forense digital y operaciones encubiertas para identificar el origen de filtraciones y proteger los activos del cliente.</p>
+        </div>
+
+        <div class="card">
+          <h3>Investigación de infidelidad</h3>
+          <p>Servicios de vigilancia discreta con enfoque profesional y compasivo, entregando pruebas claras para decisiones informadas en asuntos personales.</p>
+        </div>
+
+        <div class="card">
+          <h3>Consultoría de evaluación de riesgos</h3>
+          <p>Asesoría estratégica para empresas que planifican expansión internacional, análisis de mercado y evaluación de competencia para mitigar riesgos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Casos detallados -->
+    <section class="cases" aria-label="Casos destacados" style="margin-top:36px">
+      <h2 style="text-align:center;color:var(--accent);margin:0 0 14px;font-size:22px">Descubra el trabajo de investigación de expertos</h2>
+      <p style="text-align:center;color:var(--muted);margin:0 0 22px">Explore nuestra experiencia inigualable en investigaciones privadas, brindando precisión e integridad para descubrir la verdad en toda Bogotá.</p>
+
+      <div class="case-grid">
+        <article class="case">
+          <img src="https://picsum.photos/420/280?random=21" alt="fraude corporativo">
+          <div>
+            <h4>Fraude corporativo — Recuperación de activos</h4>
+            <p>Nuestro análisis financiero y vigilancia estratégica permitió reunir evidencia concluyente y asegurar la devolución de activos críticos para el cliente.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <img src="https://picsum.photos/420/280?random=22" alt="verificacion">
+          <div>
+            <h4>Verificación de antecedentes — Contratación segura</h4>
+            <p>Investigaciones minuciosas para confirmar credenciales y descubrir información oculta, ayudando a evitar riesgos laborales y legales.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <img src="https://picsum.photos/420/280?random=23" alt="persona desaparecida">
+          <div>
+            <h4>Persona desaparecida — Reunión familiar</h4>
+            <p>Localizamos a una persona desaparecida en una semana mediante técnicas avanzadas y coordinación con autoridades, garantizando su regreso seguro.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <img src="https://picsum.photos/420/280?random=24" alt="proteccion ip">
+          <div>
+            <h4>Protección de propiedad intelectual</h4>
+            <p>Operaciones encubiertas y forense digital para identificar filtraciones y detener el daño a diseños patentados.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- valores -->
+    <section style="margin-top:44px">
+      <h2 style="text-align:center;color:var(--accent);margin:0 0 10px;font-size:20px">Nuestros Valores en Inside Bogotá</h2>
+      <p style="text-align:center;color:var(--muted);margin:0 0 22px">Justicia para tus casos, verdad para tus actos. La verdad siempre deja huella.</p>
+
+      <div class="values">
+        <div class="value">
+          <h4>Confidencialidad</h4>
+          <p>Manejamos cada caso con absoluta discreción y procesos que protegen la identidad y la seguridad del cliente.</p>
+        </div>
+        <div class="value">
+          <h4>Rigor profesional</h4>
+          <p>Metodologías contrastadas, analistas especializados y tecnología forense al servicio de la verdad.</p>
+        </div>
+        <div class="value">
+          <h4>Resultados</h4>
+          <p>Compromiso con la entrega de pruebas y resultados que permitan tomar decisiones informadas y garantizar justicia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contacto -->
+    <section style="margin-top:36px">
+      <div class="contact">
+        <div class="left">
+          <h3>Contactenos</h3>
+          <div class="meta">Tel: <a href="tel:+573156267610" style="color:var(--accent);text-decoration:none">+57 315 6267610</a> — Email: <a href="mailto:insidebogota82@gmail.com" style="color:var(--accent);text-decoration:none">insidebogota82@gmail.com</a></div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="mailto:insidebogota82@gmail.com?subject=Solicitud%20de%20investigaci%C3%B3n">Enviar correo</a>
+          <a class="btn" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+
+      <p style="color:var(--muted);font-size:13px;text-align:center;max-width:900px;margin:6px auto 20px">
+        Inside Bogotá es una agencia de investigación privada que ofrece servicios en Bogotá, Colombia. Con integridad y precisión brindamos soluciones para casos corporativos y personales, manteniendo los más altos estándares de confidencialidad y profesionalismo.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="max-width:900px;margin:0 auto">
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px">
+          <div style="width:10px;height:10px;background:var(--accent);border-radius:2px"></div>
+          <div style="color:var(--muted)">Justicia para tus casos, verdad para tus actos</div>
+        </div>
+        <div style="color:var(--muted)">© 2025 Inside Bogotá. Todos los derechos reservados. — Bogotá, Colombia</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
